@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/joke/joke",
+    "pages/mine/mine",
+    "pages/index/picDetail/picDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#b3d4db",
+    "navigationBarTitleText": "看图小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#b3d4db",
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "看图",
+        "iconPath": "images/bar_pic.png",
+        "selectedIconPath": "images/bar_pic_select.png"
+      },
+      {
+        "pagePath": "pages/joke/joke",
+        "text": "笑话",
+        "iconPath": "images/bar_joke.png",
+        "selectedIconPath": "images/bar_joke_select.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/bar_mine.png",
+        "selectedIconPath": "images/bar_mine_select.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

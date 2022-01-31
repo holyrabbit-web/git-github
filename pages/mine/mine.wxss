@@ -1,0 +1,56 @@
+
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.nav{
+  width: 15px;
+  color: #ffffff;
+}
+.item{
+  background-color: #ffffff;
+  border-color: #ffffff;
+  display: flex;
+  margin-left: 20rpx;
+  flex-direction: row;
+  height: 80rpx;
+  align-items: center;
+}
+
+.icon image{
+  width: 64rpx;
+  height: 64rpx;
+}
+.itemName{
+  width: 40%;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left:10rpx;
+}
+.hr{
+  height: 5rpx;
+  background-color:#cccccc;
+  opacity: 0.2; 
+}
+
+
+
+.itemName view{
+  font-size: 16px;
+  color: #666666;
+  font-weight: normal;
+}

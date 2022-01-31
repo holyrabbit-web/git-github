@@ -1,0 +1,6 @@
+/* pages/index/picDetail/picDetail.wxss */
+
+
+.s-pic {
+  width: 100%;
+}

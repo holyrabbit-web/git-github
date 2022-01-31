@@ -1,0 +1,35 @@
+<scroll-view scroll-x="true" enable-flex="true" class="swiper-tab">
+  <view wx:for="{{tabItemsArray}}" wx:key="*this" class="tab-item {{currentTab == index?'on':''}}"
+    data-current="{{index}}" bindtap="swichNav">
+    {{item}}
+  </view>
+
+</scroll-view>
+
+<!-- <view >
+  <view class="item" wx:for="{{imageArray}}">
+    <image src="{{item.thumbUrl}}" mode='widthFix' />
+  </view>
+</view> -->
+
+<view class='container'>
+  <!-- 左容器 -->
+  <view class='item'>
+    <view wx:for="{{leftImages}}" wx:for-item="image" wx:key="index">
+      <image src='{{image.thumbUrl}}' data-index="{{image.index}}" bindtap="showBigImage" mode='widthFix'></image>
+      <view class="image_info" bindtap="collectImage" data-image-url="{{image.thumbUrl}}"
+      data-index="{{image.index}}">
+      <image src="{{imageArray[image.index].isCollect ? '/images/collect2.png' : '/images/collect1.png' }}"></image>
+      <text>{{imageArray[image.index].isCollect ? '已收藏':'收藏'}}</text>
+      </view>
+    </view>
+   
+  </view> 
+
+  <!-- 右容器 --> 
+   <view class='item'>
+    <view wx:for="{{rightImages}}" wx:for-item="image" wx:key="index">
+      <image src='{{image.thumbUrl}}' data-index="{{image.index}}" bindtap="showBigImage" mode='widthFix'></image>
+    </view>
+  </view>
+</view>

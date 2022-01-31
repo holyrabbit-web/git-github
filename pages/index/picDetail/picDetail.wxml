@@ -1,0 +1,13 @@
+<swiper  style="height:{{pageHeight}}px;" duration="{{duration}}"
+bindchange='onSlideChange' current="{{index}}">
+  <block wx:for="{{imageArray}}" wx:key="index" bindchange="imageChange">
+    <swiper-item>
+      <view>
+        <image class="s-pic" binderror="imageOnloadError" 
+        src="{{error?item.thumbUrl:item.picUrl}}" mode="widthFix"></image>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+
+

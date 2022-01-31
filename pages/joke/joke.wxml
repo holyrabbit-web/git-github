@@ -1,0 +1,78 @@
+<!--pages/joke/joke.wxml-->
+<scroll-view scroll-x="true" enable-flex="true" class="swiper-tab">
+  <view wx:for="{{tabItemsArray}}" wx:key="*this" class="tab-item {{currentTab == index?'on':''}}"
+    data-current="{{index}}" bindtap="swichNav">
+    {{item.name}}
+  </view>
+
+</scroll-view>
+
+
+<view class='container'>
+  <!-- 视频 -->
+  <block wx:if="{{currentTab==0}}">
+    <view class="item" id="{{item.id}}" wx:for="{{videoJokeArray}}" wx:key="id">
+      <view class="line"></view>
+      <view class="head">
+        <view>
+          <image src="{{item.user.medium}}"></image>
+        </view>
+        <view class="nickname">{{item.user.login}}</view>
+        <view class="hot"></view>
+      </view>
+      <view class="title">
+        {{item.content}}
+      </view>
+      <view class="content">
+        <view class="content-bg" style="background-image:url({{item.pic_url}});background-size:710rpx {{item.height}}rpx; width:710rpx;height:{{item.height}}rpx">
+        </view>
+        <video src="{{item.origin_url}}" style="width:{{item.width}}rpx;height:{{item.height}}rpx"></video>
+      </view>
+    </view>
+
+  </block>
+  <!-- 图片 -->
+  <block wx:elif="{{currentTab==1}}">
+    <view class="item" id="{{item.id}}" wx:for="{{imageJokeArray}}" wx:key="id">
+      <view class="line"></view>
+      <view class="head">
+        <view>
+          <image src="{{item.user.medium}}"></image>
+        </view>
+        <view class="nickname">{{item.user.login}}</view>
+        <view class="hot"></view>
+      </view>
+      <view class="title">
+        {{item.content}}
+      </view>
+      <view class="content">
+        <view class="content-bg" style="background-image:url({{item.pic_url}});background-size:710rpx {{item.height}}rpx; width:710rpx;height:{{item.height}}rpx">
+        </view>
+        <video src="{{item.origin_url}}" style="width:{{item.width}}rpx;height:{{item.height}}rpx"></video>
+      </view>
+    </view>
+
+  </block>
+  <!-- 文本 -->
+  <block wx:else="{{currentTab==2}}">
+    <view class="item" id="{{item.id}}" wx:for="{{textJokeArray}}" wx:key="id">
+      <view class="line"></view>
+      <view class="head">
+        <view>
+          <image src="{{item.user.medium}}"></image>
+        </view>
+        <view class="nickname">{{item.user.login}}</view>
+        <view class="hot"></view>
+      </view>
+      <view class="title">
+        {{item.content}}
+      </view>
+      <view class="content">
+        <view class="content-bg" style="background-image:url({{item.pic_url}});background-size:710rpx {{item.height}}rpx; width:710rpx;height:{{item.height}}rpx">
+        </view>
+        <video src="{{item.origin_url}}" style="width:{{item.width}}rpx;height:{{item.height}}rpx"></video>
+      </view>
+    </view>
+  </block>
+
+</view>
